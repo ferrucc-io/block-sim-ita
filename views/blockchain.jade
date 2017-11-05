@@ -1,23 +1,29 @@
 extends layout
 
 block content
-  .container-fluid
-    h1 #{__('Blockchain')}
-    p Una Blockchain è semplicemente una catena di questi blocchi che abbiamo definito. Per incatenare dei blocchi basta aggiungere oltre al numero del blocco, Nonce e i Dati la chiave del blocco precedente. Così se proviamo a cambiare i dati su un blocco, tutti i blocchi seguenti sono invalidati, perchè l'hash del blocco precedente cambia. In questo modo possiamo garantire che ogni volta che qualcosa viene aggiunto alla blockchain il valore degli elementi precendenti non può essere cambiato senza invalidare i blocchi successivi.
-    .row.row-horizon
-      - var blocks = []
-      - blocks.push({block: 1, chain: 1, nonce: 11316, previous: '0000000000000000000000000000000000000000000000000000000000000000'})
-      - blocks.push({block: 2, chain: 1, nonce: 35230, previous: '000015783b764259d382017d91a36d206d0600e2cbb3567748f46a33fe9297cf'})
-      - blocks.push({block: 3, chain: 1, nonce: 12937, previous: '000012fa9b916eb9078f8d98a7864e697ae83ed54f5146bd84452cdafd043c19'})
-      - blocks.push({block: 4, chain: 1, nonce: 35990, previous: '0000b9015ce2a08b61216ba5a0778545bf4ddd7ceb7bbd85dd8062b29a9140bf'})
-      - blocks.push({block: 5, chain: 1, nonce: 56265, previous: '0000ae8bbc96cf89c68be6e10a865cc47c6c48a9ebec3c6cad729646cefaef83'})
-      each block in blocks
+  div.wrapper
+   div.main.main-raised
+    .section.section-basic.container
+
+     .container-fluid
+      h1 #{__('Blockchain')}
+      p Una Blockchain è semplicemente una catena di questi blocchi che abbiamo definito. Per incatenare dei blocchi basta aggiungere oltre al numero del blocco, Nonce e i Dati la chiave del blocco precedente. Così se proviamo a cambiare i dati su un blocco, tutti i blocchi seguenti sono invalidati, perchè l'hash del blocco precedente cambia. In questo modo possiamo garantire che ogni volta che qualcosa viene aggiunto alla blockchain il valore degli elementi precendenti non può essere cambiato senza invalidare i blocchi successivi.
+      .row.row-horizon
+       - var blocks = []
+       - blocks.push({block: 1, chain: 1, nonce: 11316, previous: '0000000000000000000000000000000000000000000000000000000000000000'})
+       - blocks.push({block: 2, chain: 1, nonce: 35230, previous: '000015783b764259d382017d91a36d206d0600e2cbb3567748f46a33fe9297cf'})
+       - blocks.push({block: 3, chain: 1, nonce: 12937, previous: '000012fa9b916eb9078f8d98a7864e697ae83ed54f5146bd84452cdafd043c19'})
+       - blocks.push({block: 4, chain: 1, nonce: 35990, previous: '0000b9015ce2a08b61216ba5a0778545bf4ddd7ceb7bbd85dd8062b29a9140bf'})
+       - blocks.push({block: 5, chain: 1, nonce: 56265, previous: '0000ae8bbc96cf89c68be6e10a865cc47c6c48a9ebec3c6cad729646cefaef83'})
+       each block in blocks
         .col-xs-7
-          include includes/block.jade
+         include includes/block.jade
 
-    p.pull-right
-     a(href='./distributed') Prossima Sezione
-
+  .footer.container
+    .copyright
+     p.pull-right
+      a(href='./distributed') Prossima Sezione
+  br
   script.
     $(function() {
       setup(1, 1);

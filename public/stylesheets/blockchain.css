@@ -40,3 +40,11 @@ input {
 .brand {
   max-height: 1.2em;
 }
+
+.section-basic {
+    padding-top: 25px;
+}
+
+.section {
+    padding: 135px 0;
+}

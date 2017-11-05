@@ -1,52 +1,60 @@
 extends layout
 
 block content
-  .container
-    h1 #{__('Block')}
-    h3 Cos'è un Blocco?
-    p Un blocco è semplicemente un hash come quello di prima in cui il testo di input è formato da più elementi.
-    p In questo caso gli elementi sono il numero del blocco, il nonce e i dati che vogliamo inserire.
+  div.wrapper
+   div.main.main-raised
+    .section.section-basic
+     .container
 
-    p Prova a scrivere qualcosa e a schiacciare il tasto "Mina".
-    .well#block1chain1well
-      form.form-horizontal
+      h1 #{__('Block')}
+      h3 Cos'è un Blocco?
+      p Un blocco è semplicemente un hash come quello di prima in cui il testo di input è formato da più elementi.
+      p In questo caso gli elementi sono il numero del blocco, il nonce e i dati che vogliamo inserire.
 
-        .form-group
-          label.col-sm-2.control-label(for='block1chain1number') #{__('Block')}:
-          .col-sm-10
-            .input-group
-              span.input-group-addon #
-              input#block1chain1number.form-control(type='text', value='1' onkeyup='updateHash(1, 1);')
+      p Prova a scrivere qualcosa e a schiacciare il tasto "Mina".
+      .well#block1chain1well
+        form.form-horizontal
 
-        .form-group
-          label.col-sm-2.control-label(for='block1chain1nonce') #{__('Nonce')}:
-          .col-sm-10
-             input#block1chain1nonce.form-control(type='text', value='72608', onkeyup='updateHash(1, 1);')
+         .form-group
+           label.col-sm-2.control-label(for='block1chain1number') #{__('Block')}:
+           .col-sm-10
+             .input-group
+               span.input-group-addon #
+               input#block1chain1number.form-control(type='text', value='1' onkeyup='updateHash(1, 1);')
 
-        .form-group
-          label.col-sm-2.control-label(for='block1chain1data') #{__('Data')}:
-          .col-sm-10
-            textarea#block1chain1data.form-control(rows='10', onkeyup='updateHash(1, 1);')
+         .form-group
+           label.col-sm-2.control-label(for='block1chain1nonce') #{__('Nonce')}:
+           .col-sm-10
+              input#block1chain1nonce.form-control(type='text', value='72608', onkeyup='updateHash(1, 1);')
 
-        #state.form-group
-          label.col-sm-2.control-label(for='block1chain1hash') #{__('Hash')}:
-          .col-sm-10
-            input#block1chain1hash.form-control(type='text', disabled)
+         .form-group
+           label.col-sm-2.control-label(for='block1chain1data') #{__('Data')}:
+           .col-sm-10
+             textarea#block1chain1data.form-control(rows='10', onkeyup='updateHash(1, 1);')
 
-        .form-group
-          .col-sm-2
-            i.icon-spinner.icon-spin.icon-large
-          .col-sm-10
-            button#block1chain1mineButton.btn.btn-primary.ladda-button(data-style='expand-right')
-              span.ladda-label #{__('Mine')}
-  .container
-   h2 Cosa sta succedendo?
-   p Quando scrivi qualcosa nei dati noti che il blocco diventa rosso. Questo perchè se guardi l'hash i primi quattro caratteri non sono "0000". 
-   p Quando schiacci "Mina" con i nuovi dati inseriti però dopo un po' di tempo noti che il Nonce cambia e l'hash pure, il blocco è verde perchè l'hash comincia con "0000".
-   p In parole povere quello che succede "minando" è che tanti numeri diversi sono provati come nonce e inseriti nell'input con il numero del blocco e i dati contenuti. Quando riusciamo a generare una chiave che comincia con quattro zeri siamo contenti e teniamo quel Nonce.
+         #state.form-group
+           label.col-sm-2.control-label(for='block1chain1hash') #{__('Hash')}:
+           .col-sm-10
+             input#block1chain1hash.form-control(type='text', disabled)
+
+         .form-group
+           .col-sm-2
+             i.icon-spinner.icon-spin.icon-large
+           .col-sm-10
+             button#block1chain1mineButton.btn.btn-primary.ladda-button(data-style='expand-right')
+               span.ladda-label #{__('Mine')}
+      .container
+          h2 Cosa sta succedendo?
+          p Quando scrivi qualcosa nei dati noti che il blocco diventa rosso. Questo perchè se guardi l'hash i primi quattro caratteri non sono "0000". 
+          p Quando schiacci "Mina" con i nuovi dati inseriti però dopo un po' di tempo noti che il Nonce cambia e l'hash pure, il blocco è verde perchè l'hash comincia con "0000".
+          p In parole povere quello che succede "minando" è che tanti numeri diversi sono provati come nonce e inseriti nell'input con il numero del blocco e i dati contenuti. Quando riusciamo a generare una chiave che comincia con quattro zeri siamo contenti e teniamo quel Nonce.
    
-   p.pull-right
-    a(href='./blockchain') Prossima Sezione
+  .footer.container
+    .copyright
+     p.pull-right
+      a(href='./blockchain') Prossima Sezione
+     br
+     br
    
    script.
 

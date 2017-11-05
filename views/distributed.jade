@@ -1,25 +1,31 @@
 extends layout
 
 block content
-  .container-fluid
-    h1 #{__('Distributed Blockchain')}
-    p Una Blockchain distribuita è semplicemente una blockchain di cui tante persone hanno una copia. Ogni copia è chiamata peer. Se una copia ha dei dati danneggiati il suo ultimo hash sarà diverso da quello delle altre, quindi gli errori si possono individuare immediatamente.
-    - var peers = {1: 'A', 2: 'B', 3: 'C'}
-    - each peer, chain in peers
-      h3 #{__('Peer')} #{peer}
-      .row.row-horizon
-        - var blocks = []
-        - blocks.push({block: 1, chain: chain, nonce: 11316, previous: '0000000000000000000000000000000000000000000000000000000000000000'})
-        - blocks.push({block: 2, chain: chain, nonce: 35230, previous: '000015783b764259d382017d91a36d206d0600e2cbb3567748f46a33fe9297cf'})
-        - blocks.push({block: 3, chain: chain, nonce: 12937, previous: '000012fa9b916eb9078f8d98a7864e697ae83ed54f5146bd84452cdafd043c19'})
-        - blocks.push({block: 4, chain: chain, nonce: 35990, previous: '0000b9015ce2a08b61216ba5a0778545bf4ddd7ceb7bbd85dd8062b29a9140bf'})
-        - blocks.push({block: 5, chain: chain, nonce: 56265, previous: '0000ae8bbc96cf89c68be6e10a865cc47c6c48a9ebec3c6cad729646cefaef83'})
-        each block in blocks
-          .col-xs-7
-            include includes/block.jade
+  div.wrapper
+   div.main.main-raised
+    .section.section-basic.container
+     .container-fluid
+      h1 #{__('Distributed Blockchain')}
+      p Una Blockchain distribuita è semplicemente una blockchain di cui tante persone hanno una copia. Ogni copia è chiamata peer. Se una copia ha dei dati danneggiati il suo ultimo hash sarà diverso da quello delle altre, quindi gli errori si possono individuare immediatamente.
+      - var peers = {1: 'A', 2: 'B', 3: 'C'}
+      - each peer, chain in peers
+       h3 #{__('Peer')} #{peer}
+       .row.row-horizon
+         - var blocks = []
+         - blocks.push({block: 1, chain: chain, nonce: 11316, previous: '0000000000000000000000000000000000000000000000000000000000000000'})
+         - blocks.push({block: 2, chain: chain, nonce: 35230, previous: '000015783b764259d382017d91a36d206d0600e2cbb3567748f46a33fe9297cf'})
+         - blocks.push({block: 3, chain: chain, nonce: 12937, previous: '000012fa9b916eb9078f8d98a7864e697ae83ed54f5146bd84452cdafd043c19'})
+         - blocks.push({block: 4, chain: chain, nonce: 35990, previous: '0000b9015ce2a08b61216ba5a0778545bf4ddd7ceb7bbd85dd8062b29a9140bf'})
+         - blocks.push({block: 5, chain: chain, nonce: 56265, previous: '0000ae8bbc96cf89c68be6e10a865cc47c6c48a9ebec3c6cad729646cefaef83'})
+         each block in blocks
+           .col-xs-7
+             include includes/block.jade
   
-  p.pull-right
-   a(href='./tokens') Prossima Sezione
+  .footer.container
+    .copyright
+     p.pull-right
+      a(href='./tokens') Prossima Sezione
+   br
   script.
     $(function() {
       setup(1, 1);
