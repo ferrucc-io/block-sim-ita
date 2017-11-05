@@ -7,7 +7,14 @@ block content
 
      .container-fluid
       h1 #{__('Blockchain')}
-      p Una Blockchain è semplicemente una catena di questi blocchi che abbiamo definito. Per incatenare dei blocchi basta aggiungere oltre al numero del blocco, Nonce e i Dati la chiave del blocco precedente. Così se proviamo a cambiare i dati su un blocco, tutti i blocchi seguenti sono invalidati, perchè l'hash del blocco precedente cambia. In questo modo possiamo garantire che ogni volta che qualcosa viene aggiunto alla blockchain il valore degli elementi precendenti non può essere cambiato senza invalidare i blocchi successivi.
+      p Una Blockchain è una particolare serie di blocchi. Questi blocchi, infatti sono incatenati. 
+      p
+       b In che modo?
+      p Per incatenare dei blocchi viene aggiunto un quarto dato: la chiave del Blocco precedente. 
+      p Questo dato viene aggiunto perchè se proviamo a cambiare i dati su un blocco, il suo hash cambia. E i blocchi seguenti sono invalidati, perchè l'hash del loro blocco precedente cambia. In questo modo possiamo garantire che ogni volta che qualcosa viene aggiunto alla blockchain il valore degli elementi precendenti non può essere cambiato senza invalidare i blocchi successivi.
+      p Abbiamo quindi un perfetto 
+       a(href="https://cryptotrend.it/2017/10/23/cosa-sono-i-bitcoin/") Libro Mastro mercantile!
+
       .row.row-horizon
        - var blocks = []
        - blocks.push({block: 1, chain: 1, nonce: 11316, previous: '0000000000000000000000000000000000000000000000000000000000000000'})

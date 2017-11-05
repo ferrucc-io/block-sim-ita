@@ -7,7 +7,7 @@ block content
      .container
 
       h1 SHA256 #{__('Hash')}
-      p Prova ad inserire del testo qui sotto per vedere cosa succede: 
+      p Prova ad inserire del testo qui sotto: 
 
       .well#well1
        form.form-horizontal
@@ -22,15 +22,18 @@ block content
           .col-sm-10
             input#hash.form-control(type='text', disabled)
 
-      p Man mano che inserisci del testo il codice che vedi sotto cambia giusto? 
+      p Man mano che inserisci del testo il codice che vedi sotto cambia, giusto? 
 
-      p Quel che succede è che generiamo un'impronta unica di alcuni dati. Per ogni cosa che scriviamo viene generata una chiave unica per identificare quel che abbiamo scritto. 
+      p Il codice sotto, infatti è un'impronta digitale dei dati inseriti.
+      p È unica per ogni combinazione di dati che inserisci. 
+      p Usando il codice generato possiamo identificare i dati inseriti.
 
-      p Solo scrivendo lo stesso testo riusciamo a generare la stessa chiave.
+      p Solo scrivendo gli stessi dati riusciamo a generare la stessa chiave.
 
-      h2 Cos'è quindi un algoritmo di hashing?
+      h2 Cos'è un algoritmo di hashing?
       p Un algoritmo di hashing idealmente è un algoritmo che dato dell'input genera una chiave sempre uguale. E dati input diversi non genera mai la stessa chiave. 
       p Quando due input diversi generano una stessa chiave abbiamo una collisione. Un buon algoritmo di hashing idealmente non genera collisioni.
+      p L'algoritmo usato su questa pagina si chiama SHA256 ed è uno degli algoritmi di hashing più utilizzati al momento.
 
   .footer.container
     .copyright

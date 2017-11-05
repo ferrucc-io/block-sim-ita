@@ -8,8 +8,8 @@ block content
 
       h1 #{__('Block')}
       h3 Cos'è un Blocco?
-      p Un blocco è semplicemente un hash come quello di prima in cui il testo di input è formato da più elementi.
-      p In questo caso gli elementi sono il numero del blocco, il nonce e i dati che vogliamo inserire.
+      p Un blocco è semplicemente un hash come quello nella scorsa pagina in cui i dati anzichè essere un unico testo, sono più elementi.
+      p Nel caso di un blocco gli elementi sono il numero del blocco, il nonce e i dati che vogliamo inserire.
 
       p Prova a scrivere qualcosa e a schiacciare il tasto "Mina".
       .well#block1chain1well
@@ -45,9 +45,9 @@ block content
                span.ladda-label #{__('Mine')}
       .container
           h2 Cosa sta succedendo?
-          p Quando scrivi qualcosa nei dati noti che il blocco diventa rosso. Questo perchè se guardi l'hash i primi quattro caratteri non sono "0000". 
-          p Quando schiacci "Mina" con i nuovi dati inseriti però dopo un po' di tempo noti che il Nonce cambia e l'hash pure, il blocco è verde perchè l'hash comincia con "0000".
-          p In parole povere quello che succede "minando" è che tanti numeri diversi sono provati come nonce e inseriti nell'input con il numero del blocco e i dati contenuti. Quando riusciamo a generare una chiave che comincia con quattro zeri siamo contenti e teniamo quel Nonce.
+          p Se provi a scrivere qualcosa l'hash cambia e il blocco diventa rosso. Questo perchè nell'hash i primi quattro caratteri cambiano e non sono più "0000". 
+          p Quando schiacci "Mina" con i nuovi dati inseriti però dopo un po' di tempo noti che il Nonce e l'hash cambiano e il blocco è verde perchè l'hash comincia con "0000".
+          p In parole povere quello che succede "minando" è che il computer prova tanti numeri diversi nel campo del Nonce cercando di trovare un numero che restituisca un hash che cominci con quattro zeri. Quando ci riesce salva il Nonce e si illumina di verde.
    
   .footer.container
     .copyright
