@@ -827,13 +827,8 @@ a .material-icons, a:hover .material-icons, a:focus .material-icons {
   padding-left: 0;
   color: rgba(0,0,0, 0.26);
 }
-.form-group.is-focused .checkbox label {
-  color: rgba(0,0,0, 0.26);
-}
-.form-group.is-focused .checkbox label:hover, .form-group.is-focused .checkbox label:focus {
-  color: rgba(0,0,0, .54);
-}
-fieldset[disabled] .form-group.is-focused .checkbox label {
+
+fieldset[disabled] .checkbox label {
   color: rgba(0,0,0, 0.26);
 }
 .checkbox input[type=checkbox] {
@@ -1000,13 +995,13 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
   cursor: pointer;
   color: rgba(0,0,0, 0.26);
 }
-.form-group.is-focused .togglebutton label {
+.togglebutton label {
   color: rgba(0,0,0, 0.26);
 }
-.form-group.is-focused .togglebutton label:hover, .form-group.is-focused .togglebutton label:focus {
+ .togglebutton label:hover, .togglebutton label:focus {
   color: rgba(0,0,0, .54);
 }
-fieldset[disabled] .form-group.is-focused .togglebutton label {
+fieldset[disabled] .togglebutton label {
   color: rgba(0,0,0, 0.26);
 }
 .togglebutton label input[type=checkbox] {
@@ -1069,13 +1064,13 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   position: relative;
   color: rgba(0,0,0, 0.26);
 }
-.form-group.is-focused .radio label {
+.radio label {
   color: rgba(0,0,0, 0.26);
 }
-.form-group.is-focused .radio label:hover, .form-group.is-focused .radio label:focus {
+.radio label:hover, .radio label:focus {
   color: rgba(0,0,0, .54);
 }
-fieldset[disabled] .form-group.is-focused .radio label {
+fieldset[disabled] .radio label {
   color: rgba(0,0,0, 0.26);
 }
 .radio label span {
@@ -1260,28 +1255,6 @@ output {
   height: auto;
 }
 
-.form-group-sm .form-control {
-  height: 24px;
-  padding: 3px 0;
-  font-size: 11px;
-  line-height: 1.5;
-}
-.form-group-sm select.form-control {
-  height: 24px;
-  line-height: 24px;
-}
-.form-group-sm textarea.form-control,
-.form-group-sm select[multiple].form-control {
-  height: auto;
-}
-.form-group-sm .form-control-static {
-  height: 24px;
-  min-height: 31px;
-  padding: 4px 0;
-  font-size: 11px;
-  line-height: 1.5;
-}
-
 .input-lg .input-lg {
   height: 44px;
   padding: 9px 0;
@@ -1297,55 +1270,6 @@ output {
 .input-lg select[multiple].input-lg {
   height: auto;
 }
-
-.form-group-lg .form-control {
-  height: 44px;
-  padding: 9px 0;
-  font-size: 18px;
-  line-height: 1.33333;
-}
-.form-group-lg select.form-control {
-  height: 44px;
-  line-height: 44px;
-}
-.form-group-lg textarea.form-control,
-.form-group-lg select[multiple].form-control {
-  height: auto;
-}
-.form-group-lg .form-control-static {
-  height: 44px;
-  min-height: 38px;
-  padding: 10px 0;
-  font-size: 18px;
-  line-height: 1.33333;
-}
-
-.form-horizontal .radio,
-.form-horizontal .checkbox,
-.form-horizontal .radio-inline,
-.form-horizontal .checkbox-inline {
-  padding-top: 8px;
-}
-.form-horizontal .radio,
-.form-horizontal .checkbox {
-  min-height: 28px;
-}
-@media (min-width: 768px) {
-  .form-horizontal .control-label {
-    padding-top: 8px;
-  }
-}
-@media (min-width: 768px) {
-  .form-horizontal .form-group-lg .control-label {
-    padding-top: 13.0px;
-    font-size: 18px;
-  }
-}
-@media (min-width: 768px) {
-  .form-horizontal .form-group-sm .control-label {
-    padding-top: 4px;
-    font-size: 11px;
-  }
 }
 
 .label {
@@ -1373,20 +1297,7 @@ output {
   background-color: #f44336;
 }
 
-.form-control,
-.form-group .form-control {
-  border: 0;
-  background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#D2D2D2, #D2D2D2);
-  background-size: 0 2px, 100% 1px;
-  background-repeat: no-repeat;
-  background-position: center bottom, center calc(100% - 1px);
-  background-color: transparent;
-  transition: background 0s ease-out;
-  float: none;
-  box-shadow: none;
-  border-radius: 0;
-  font-weight: 400;
-}
+
 .form-control::-moz-placeholder,
 .form-group .form-control::-moz-placeholder {
   color: #AAAAAA;
