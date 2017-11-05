@@ -1,21 +1,22 @@
 {
-  "name": "blockchain-demo",
-  "description": "A web-based demonstration of blockchain concepts.",
+  "name": "block-sim-ita",
+  "description": "Dimostrazione e spiegazione guidata dei concetti fondamentali dietro alla Blockchain",
   "author": {
-    "name": "Anders Brownworth"
+    "name": "Ferruccio Balestreri"
   },
-  "version": "0.0.1",
+  "version": "0.1",
   "keywords": [
     "blockchain",
     "demo",
-    "bitcoin"
+    "bitcoin",
+    "italiano"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anders94/blockchain-demo.git"
+    "url": "git+https://github.com/ferrucc-io/block-sim-ita.git"
   },
   "bugs": {
-    "url": "https://github.com/anders94/blockchain-demo/issues"
+    "url": "https://github.com/ferrucc-io/block-sim-ita/issues"
   },
   "license": "MIT",
   "dependencies": {
@@ -32,11 +33,11 @@
   "scripts": {
     "start": "node app.js"
   },
-  "homepage": "https://github.com/anders94/blockchain-demo#readme",
+  "homepage": "https://github.com/ferrucc-io/block-sim-ita#readme",
   "maintainers": [
     {
-      "name": "anders",
-      "email": "anders-git@evantide.com"
+      "name": "ferrucc-io",
+      "email": "hi@ferrucc.io"
     }
   ]
 }
