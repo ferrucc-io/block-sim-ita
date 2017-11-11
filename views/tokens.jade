@@ -24,10 +24,15 @@ block content
            .col-xs-7
              include includes/tokenblock.jade
   .footer.container
-    .copyright
-     p.pull-right
-      a(href='./coinbase') Prossima Sezione
-    br 
+    .copyrightp.pull-left
+     a(href='./distributed')
+      button.btn.btn-primary.next-button(data-style='expand-right')
+       span.ladda-label Torna Indietro
+
+    .copyrightp.pull-right
+     a(href='./coinbase')
+      button.btn.btn-primary.next-button(data-style='expand-right')
+       span.ladda-label Prossima Sezione
     br
   script.
     $(function() {

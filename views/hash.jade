@@ -36,9 +36,17 @@ block content
       p L'algoritmo usato su questa pagina si chiama SHA256 ed è uno degli algoritmi di hashing più utilizzati al momento.
 
   .footer.container
-    .copyright
-     p.pull-right
-      a(href='./block') Prossima Sezione
+    .copyrightp.pull-left
+     a(href='../')
+      button.btn.btn-primary.next-button(data-style='expand-right')
+       span.ladda-label Torna Indietro
+
+    .copyrightp.pull-right
+     a(href='./block')
+      button.btn.btn-primary.next-button(data-style='expand-right')
+       span.ladda-label Prossima Sezione
+      
+      
   br
   script.
     function getText(block, chain) {

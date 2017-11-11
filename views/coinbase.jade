@@ -16,15 +16,20 @@ block content
        h3 #{__('Peer')} #{peer}
        .row.row-horizon
          - var blocks = []
-         - blocks.push({block: 1, chain: chain, nonce: 16651, coinbasevalue: '100.00', coinbaseto: 'Ferruccio', txs: [], previous: '0000000000000000000000000000000000000000000000000000000000000000'})
-         - blocks.push({block: 2, chain: chain, nonce: 215458, coinbasevalue: '100.00', coinbaseto: 'Ferruccio', txs: [{value: '10.00', from: 'Ferruccio', to: 'Marta'},{value: '20.00', from: 'Ferruccio', to: 'Lucas'},{value: '15.00', from: 'Ferruccio', to: 'Giulia'},{value: '15.00', from: 'Ferruccio', to: 'Maria'}], previous: '0000438d7625b86a6f366545b1929975a0d3ff1f8847e56cc587cadddb0ab781'})
-         - blocks.push({block: 3, chain: chain, nonce: 146, coinbasevalue: '100.00', coinbaseto: 'Ferruccio', txs: [{value: '10.00', from: 'Giulia', to: 'Jackson'},{value: '5.00', from: 'Maria', to: 'Jackson'},{value: '20.00', from: 'Lucas', to: 'Grace'}], previous: '0000baeab68c2a60f9a6fa56355438d97c672a15494fcea617064d9314f9ff63'})
-         - blocks.push({block: 4, chain: chain, nonce: 18292, coinbasevalue: '100.00', coinbaseto: 'Ferruccio', txs: [{value: '15.00', from: 'Jackson', to: 'Antonio'},{value: '5.00', from: 'Giulia', to: 'Maria'},{value: '8.00', from: 'Marta', to: 'Jackson'}], previous: '0000df1d632b734f5a5fc126a0f0e8894fb4c8314ba7086b62980559af6771b9'})
-         - blocks.push({block: 5, chain: chain, nonce: 108899, coinbasevalue: '100.00', coinbaseto: 'Marta', txs: [{value: '2.00', from: 'Jackson', to: 'Alexander'},{value: '6.00', from: 'Antonio', to: 'Carter'},{value: '4.00', from: 'Antonio', to: 'Riley'},{value: '9.95', from: 'Grace', to: 'Katherine'}], previous: '0000c694336f88129f3685bd3ba5d67c445dfd8d18bd22f5d87301dd560eb30e'})
+         - blocks.push({block: 1, chain: chain, nonce: 21454, coinbasevalue: '100.00', coinbaseto: 'Ferruccio', txs: [], previous: '0000000000000000000000000000000000000000000000000000000000000000'})
+         - blocks.push({block: 2, chain: chain, nonce: 147606, coinbasevalue: '100.00', coinbaseto: 'Ferruccio', txs: [{value: '10.00', from: 'Ferruccio', to: 'Marta'},{value: '20.00', from: 'Ferruccio', to: 'Lucas'},{value: '15.00', from: 'Ferruccio', to: 'Giulia'},{value: '15.00', from: 'Ferruccio', to: 'Maria'}], previous: '0000862f21a03158d6a818687dd45f0e1c7fd1933a541837bfa696fe85673ee0'})
+         - blocks.push({block: 3, chain: chain, nonce: 51201, coinbasevalue: '100.00', coinbaseto: 'Ferruccio', txs: [{value: '10.00', from: 'Giulia', to: 'Jackson'},{value: '5.00', from: 'Maria', to: 'Jackson'},{value: '20.00', from: 'Lucas', to: 'Grace'}], previous: '000058c7e289b5d93e9f83173c69b6885115a12ef0364b9a119706a5216a9e6d'})
+         - blocks.push({block: 4, chain: chain, nonce: 23056, coinbasevalue: '100.00', coinbaseto: 'Ferruccio', txs: [{value: '15.00', from: 'Jackson', to: 'Antonio'},{value: '5.00', from: 'Giulia', to: 'Maria'},{value: '8.00', from: 'Marta', to: 'Jackson'}], previous: '000030bbcbbf4b90b0dcd7a0dd8084d7065d69f51950e353bba9e6bc3d2d4908'})
+         - blocks.push({block: 5, chain: chain, nonce: 47012, coinbasevalue: '100.00', coinbaseto: 'Marta', txs: [{value: '2.00', from: 'Jackson', to: 'Alexander'},{value: '6.00', from: 'Antonio', to: 'Carter'},{value: '4.00', from: 'Antonio', to: 'Riley'},{value: '9.95', from: 'Grace', to: 'Katherine'}], previous: '0000548c54d562445b4bf442defabb4392d75554fd3ba9b77654618c6830c702'})
          each block in blocks
           .col-xs-7
             include includes/coinbaseblock.jade
 
+  .footer.container
+   .copyrightp.pull-left
+     a(href='./tokens')
+      button.btn.btn-primary.next-button(data-style='expand-right')
+       span.ladda-label Torna Indietro
     
   script.
     $(function() {

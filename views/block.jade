@@ -50,12 +50,16 @@ block content
           p In parole povere quello che succede "minando" è che il computer prova tanti numeri diversi nel campo del Nonce cercando di trovare un numero che restituisca un hash che cominci con quattro zeri. Quando ci riesce salva il Nonce e si illumina di verde.
    
   .footer.container
-    .copyright
-     p.pull-right
-      a(href='./blockchain') Prossima Sezione
-     br
-     br
-   
+   .copyrightp.pull-left
+     a(href='../')
+      button.btn.btn-primary.next-button(data-style='expand-right')
+       span.ladda-label Torna Indietro
+
+    .copyrightp.pull-right
+     a(href='./blockchain')
+      button.btn.btn-primary.next-button(data-style='expand-right')
+       span.ladda-label Prossima Sezione
+      
    script.
 
     $(function() {

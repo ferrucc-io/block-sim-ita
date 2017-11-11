@@ -22,10 +22,16 @@ block content
              include includes/block.jade
   
   .footer.container
-    .copyright
-     p.pull-right
-      a(href='./tokens') Prossima Sezione
-   br
+    .copyrightp.pull-left
+     a(href='./blockchain')
+      button.btn.btn-primary.next-button(data-style='expand-right')
+       span.ladda-label Torna Indietro
+
+    .copyrightp.pull-right
+     a(href='./tokens')
+      button.btn.btn-primary.next-button(data-style='expand-right')
+       span.ladda-label Prossima Sezione
+       
   script.
     $(function() {
       setup(1, 1);

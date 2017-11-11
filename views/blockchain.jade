@@ -27,9 +27,16 @@ block content
          include includes/block.jade
 
   .footer.container
-    .copyright
-     p.pull-right
-      a(href='./distributed') Prossima Sezione
+   .copyrightp.pull-left
+     a(href='./block')
+      button.btn.btn-primary.next-button(data-style='expand-right')
+       span.ladda-label Torna Indietro
+
+    .copyrightp.pull-right
+     a(href='./distributed')
+      button.btn.btn-primary.next-button(data-style='expand-right')
+       span.ladda-label Prossima Sezione
+   
   br
   script.
     $(function() {
